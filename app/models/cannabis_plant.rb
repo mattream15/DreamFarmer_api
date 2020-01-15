@@ -1,0 +1,2 @@
+class CannabisPlant < ApplicationRecord
+end
