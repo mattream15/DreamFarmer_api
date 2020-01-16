@@ -19,3 +19,5 @@ CannabisPlant.create([
 { species: "Hybrid", varietyName: "Larry Bird Kush", numberOfSeeds: 9 },
 { species: "Hybrid", varietyName: "Pineapple Express", numberOfSeeds: 10 }
 ])
+
+CloneRoom.create({ light_source: "HID", nutrient: "General Hydroponics Organics", relative_humidity: "40%-45%", temperature: "68-77 ºF", pH: "5.5-6.5" })

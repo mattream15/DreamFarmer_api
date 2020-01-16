@@ -1,0 +1,2 @@
+class CloneRoom < ApplicationRecord
+end
