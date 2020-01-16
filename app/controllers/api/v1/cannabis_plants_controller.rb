@@ -11,23 +11,24 @@ class Api::V1::CannabisPlantsController < ApplicationController
         end
 
         def show
-            if @cannabis_plant = CannabisPlant.find_by(id: params[:id])
+            #if 
+                @cannabis_plant = CannabisPlant.find_by(id: params[:id])
                 render json: @cannabis_plant, status: 200
                 #@harvest = @cannabis_plant.harvest
-            else 
-                render flash[:error] = "Record not found"
-            end
+            #else 
+                #render flash[:error] = "Record not found"
+            #end
         end
     
         def create
             @cannabis_plant = CannabisPlant.new(cannabis_plant_params)
             #@cannabis_plant = current_user.cannabis_plants.build(cannabis_plant_params)
-            if @cannabis_plant.save
+            #if @cannabis_plant.save
                 render json: @cannabis_plant, status: 200
-            else
-                render flash[:error] = "Record not saved"
+            #else
+                #render flash[:error] = "Record not saved"
                 #render :new
-            end
+            #end
         end
 
         def new
@@ -36,11 +37,12 @@ class Api::V1::CannabisPlantsController < ApplicationController
     
         def update
             @cannabis_plant = CannabisPlant.find_by(id: params[:id])
-            if @cannabis_plant.update(cannabis_plant_params)
+            #if 
+                @cannabis_plant.update(cannabis_plant_params)
                 render json: @cannabis_plant, status: 200
-            else
-                render flash[:error] = "Record not updated"
-            end
+            #else
+                #render flash[:error] = "Record not updated"
+            #end
         end
 
         def destroy
@@ -52,6 +54,6 @@ class Api::V1::CannabisPlantsController < ApplicationController
         private
     
         def cannabis_plant_params
-            params.require(:cannabisPlant).permit(:species, :varietyName, :numberOfSeeds)
+            params.require(:cannabisPlant).permit(:species, :varietyName, :numberOfSeeds, :cloneRoomId)
         end
 end

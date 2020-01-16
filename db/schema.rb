@@ -16,14 +16,15 @@ ActiveRecord::Schema.define(version: 2020_01_16_161338) do
     t.string "species"
     t.string "varietyName"
     t.integer "numberOfSeeds"
+    t.integer "cloneRoomId"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "clone_rooms", force: :cascade do |t|
-    t.string "light_source"
+    t.string "lightSource"
     t.string "nutrient"
-    t.string "relative_humidity"
+    t.string "relativeHumidity"
     t.string "temperature"
     t.string "pH"
     t.datetime "created_at", precision: 6, null: false

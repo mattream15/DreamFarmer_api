@@ -20,4 +20,4 @@ CannabisPlant.create([
 { species: "Hybrid", varietyName: "Pineapple Express", numberOfSeeds: 10 }
 ])
 
-CloneRoom.create({ light_source: "HID", nutrient: "General Hydroponics Organics", relative_humidity: "40%-45%", temperature: "68-77 ºF", pH: "5.5-6.5" })
+CloneRoom.create({ lightSource: "HID", nutrient: "General Hydroponics Organics", relativeHumidity: "40%-45%", temperature: "68-77 ºF", pH: "5.5-6.5" })
