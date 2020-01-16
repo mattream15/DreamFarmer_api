@@ -1,3 +1,3 @@
 class CannabisPlant < ApplicationRecord
-    belongs_to :clone_room
+    belongs_to :grow_room
 end

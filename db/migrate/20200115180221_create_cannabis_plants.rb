@@ -4,7 +4,7 @@ class CreateCannabisPlants < ActiveRecord::Migration[6.0]
       t.string :species
       t.string :varietyName
       t.integer :numberOfSeeds
-      t.integer :cloneRoomId
+      t.integer :growRoomId
       t.timestamps
     end
   end

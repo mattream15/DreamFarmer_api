@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :cannabis_plants
-      resources :clone_rooms, only: [:show]
+      resources :grow_rooms, only: [:show]
     end
   end
 end

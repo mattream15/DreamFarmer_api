@@ -16,12 +16,12 @@ ActiveRecord::Schema.define(version: 2020_01_16_161338) do
     t.string "species"
     t.string "varietyName"
     t.integer "numberOfSeeds"
-    t.integer "cloneRoomId"
+    t.integer "growRoomId"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "clone_rooms", force: :cascade do |t|
+  create_table "grow_rooms", force: :cascade do |t|
     t.string "lightSource"
     t.string "nutrient"
     t.string "relativeHumidity"
