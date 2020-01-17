@@ -23,16 +23,11 @@ class Api::V1::CannabisPlantsController < ApplicationController
         def create
             @cannabis_plant = CannabisPlant.new(cannabis_plant_params)
             #@cannabis_plant = current_user.cannabis_plants.build(cannabis_plant_params)
-            #if @cannabis_plant.save
+            if @cannabis_plant.save
                 render json: @cannabis_plant, status: 200
-            #else
-                #render flash[:error] = "Record not saved"
-                #render :new
-            #end
-        end
-
-        def new
-            @cannabis_plant = CannabisPlant.new
+            else
+                render json: "Cannabis Plant not saved"
+            end
         end
     
         def update
