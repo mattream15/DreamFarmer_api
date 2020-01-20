@@ -1,24 +1,27 @@
-# README
+# DreamFarmer
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to the DreamFarmer App! DreamFarmer gives users the opportunity to grow a variety of cannabis plants ranging from sativa, indica, and hybrid strains. Our expert growers will carefully nurture your plants throughout their growth cycle, adjusting nutrients, relative humidity, temperature, and pH as needed to  guarantee our farmer's with a high quality and quantity harvest!
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+Clone the api github repository
 
-* System dependencies
+Install all required gems: bundle install
 
-* Configuration
+Migrate the database: rake db:migrate
 
-* Database creation
+Seed Database: rake db:seed
 
-* Database initialization
+Initiate rails: rails s
 
-* How to run the test suite
+Additionally, clone the client github repository at https://github.com/mattream15/DreamFarmer_client
 
-* Services (job queues, cache servers, search engines, etc.)
+Open index.html
 
-* Deployment instructions
+## Contributing
 
-* ...
+Bug reports and pull requests are welcome on GitHub at https://github.com/mattream15/DreamFarmer_api. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+## License
+
+The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
