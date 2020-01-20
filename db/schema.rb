@@ -14,17 +14,17 @@ ActiveRecord::Schema.define(version: 2020_01_16_161338) do
 
   create_table "cannabis_plants", force: :cascade do |t|
     t.string "species"
-    t.string "varietyName"
-    t.integer "numberOfSeeds"
-    t.integer "growRoomId"
+    t.string "variety_name"
+    t.integer "number_of_seeds"
+    t.integer "grow_room_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "grow_rooms", force: :cascade do |t|
-    t.string "lightSource"
+    t.string "light_source"
     t.string "nutrient"
-    t.string "relativeHumidity"
+    t.string "relative_humidity"
     t.string "temperature"
     t.string "pH"
     t.datetime "created_at", precision: 6, null: false

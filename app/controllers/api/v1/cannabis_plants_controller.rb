@@ -49,6 +49,6 @@ class Api::V1::CannabisPlantsController < ApplicationController
         private
     
         def cannabis_plant_params
-            params.require(:cannabisPlant).permit(:species, :varietyName, :numberOfSeeds, :growRoomId)
+            params.require(:cannabisPlant).permit(:species, :variety_name, :number_of_seeds, :grow_room_id)
         end
 end
