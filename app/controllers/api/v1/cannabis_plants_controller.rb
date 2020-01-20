@@ -1,43 +1,34 @@
 class Api::V1::CannabisPlantsController < ApplicationController
 
         def index
-            #if current_user
-            #    @cannabis_plants = current_user.cannabis_plants.all
-            #else
                 @cannabis_plants = CannabisPlant.all
-
                 render json: @cannabis_plants, status: 200
-            #end
         end
 
         def show
-            #if 
-                @cannabis_plant = CannabisPlant.find_by(id: params[:id])
+            if @cannabis_plant = CannabisPlant.find_by(id: params[:id])
                 render json: @cannabis_plant, status: 200
-                #@harvest = @cannabis_plant.harvest
-            #else 
-                #render flash[:error] = "Record not found"
-            #end
+            else 
+                render json: "Cannabis Plant Not Found"
+            end
         end
     
         def create
             @cannabis_plant = CannabisPlant.new(cannabis_plant_params)
-            #@cannabis_plant = current_user.cannabis_plants.build(cannabis_plant_params)
             if @cannabis_plant.save
                 render json: @cannabis_plant, status: 200
             else
-                render json: "Cannabis Plant not saved"
+                render json: "Cannabis Plant Not Saved"
             end
         end
     
         def update
             @cannabis_plant = CannabisPlant.find_by(id: params[:id])
-            #if 
-                @cannabis_plant.update(cannabis_plant_params)
+            if @cannabis_plant.update(cannabis_plant_params)
                 render json: @cannabis_plant, status: 200
-            #else
-                #render flash[:error] = "Record not updated"
-            #end
+            else
+                render json: "Cannabis Plant Not Updated"
+            end
         end
 
         def destroy
